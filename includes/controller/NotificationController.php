@@ -195,7 +195,7 @@ class EchoNotificationController {
 		$job = new EchoNotificationJob(
 			$event->getTitle() ?: Title::newMainPage(),
 			[
-				'eventId' => $event->getId(),
+				'event' => $event,
 				'masterPos' => MWEchoDbFactory::newFromDefault()
 					->getMasterPosition(),
 			]
